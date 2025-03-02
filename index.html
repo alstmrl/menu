@@ -5,33 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>음식 정보</title>
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;  
-        }
-
         body { 
             text-align: center; 
             font-family: Arial, sans-serif; 
-            padding: 0;  
-            height: 100vh;  
-            display: flex;
-            justify-content: center;  
-            align-items: center;      
-            background-color: #f0f0f0; 
+            padding: 20px; 
         }
 
+        /* 반응형 이미지 스타일 */
         img {
-            width: 100% !important;        
-            max-width: 600px !important;    
-            height: auto !important;        
-            border-radius: 10px;            
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-            display: block;                 
-            margin: 0 auto;                 
-            object-fit: cover;              
+            width: 100% !important;        /* 부모 너비에 맞춰 100% 크기 */
+            max-width: 400px !important;    /* 최대 너비 400px */
+            height: auto !important;        /* 비율에 맞게 자동으로 높이 조정 */
+            border-radius: 10px;            /* 이미지 모서리 둥글게 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 */
         }
     </style>
 </head>
