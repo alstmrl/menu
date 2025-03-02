@@ -5,18 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>음식 정보</title>
     <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;  
+        }
+
         body { 
             text-align: center; 
             font-family: Arial, sans-serif; 
-            padding: 20px; 
+            padding: 0;  
+            height: 100vh;  
+            display: flex;
+            justify-content: center;  
+            align-items: center;      
+            background-color: #f0f0f0; 
         }
 
         img {
             width: 100% !important;        
-            max-width: 400px !important;    
+            max-width: 600px !important;    
             height: auto !important;        
             border-radius: 10px;            
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            display: block;                 
+            margin: 0 auto;                 
+            object-fit: cover;              
         }
     </style>
 </head>
