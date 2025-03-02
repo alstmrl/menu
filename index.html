@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식 정보</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; padding: 20px; }
+        img { width: 80%; max-width: 400px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+    </style>
+</head>
+<body>
+    <h1 id="food-name">음식 이름</h1>
+    <img id="food-image" src="" alt="음식 사진">
+    <p id="food-description">음식 설명</p>
+
+    <script>
+        const foodData = {
+            "margerita": {
+                name: "마르게리따",
+                image: "https://photos.app.goo.gl/453S31svEuGuFBEy7",
+                description: ""
+            },
+            "marinara": {
+                name: "마리나라",
+                image: "https://photos.app.goo.gl/SuLiTrb8D9Ct6Gxt5",
+                description: ""
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const foodId = urlParams.get('id');
+
+        if (foodData[foodId]) {
+            document.getElementById("food-name").textContent = foodData[foodId].name;
+            document.getElementById("food-image").src = foodData[foodId].image;
+            document.getElementById("food-description").textContent = foodData[foodId].description;
+        } else {
+            document.body.innerHTML = "<h1>음식을 찾을 수 없습니다.</h1>";
+        }
+    </script>
+</body>
+</html>
